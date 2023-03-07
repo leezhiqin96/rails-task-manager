@@ -3,4 +3,5 @@
 <%= check_box(@task.title, @label, :checked => @task.completed) %>
 <%= label_tag(@task.title, @label) %>
 
-<%= link_to "Back to list", index_path %>
+<%= link_to "Edit this task", edit_task_path %>
+<%= link_to "Back to list", tasks_path %>
