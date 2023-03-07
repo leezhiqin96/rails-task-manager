@@ -5,6 +5,11 @@
     <li>
       <%= check_box_tag(:task) %>
       <%= link_to task.title, task_path(task) %>
+      .
+     <%= link_to "Delete",
+      destroy_task_path(task),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
     </li>
   <% end %>
 </ul>
